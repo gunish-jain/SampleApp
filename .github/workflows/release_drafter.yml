@@ -28,7 +28,7 @@ jobs:
       - name: Extract APK version
         id: extract_version
         run: |
-          APK_VERSION=$(grep 'const val VERSION_NAME' buildSrc/src/main/java/Versions.kt | sed -E 's/.*VERSION_NAME\s*=\s*"([^"]+)".*/\1/')
+          APK_VERSION=$(grep 'const val VERSION_NAME' app/src/main/Versions.kt | sed -E 's/.*VERSION_NAME\s*=\s*"([^"]+)".*/\1/')
           echo "APK_VERSION=$APK_VERSION" >> $GITHUB_ENV
 
       - name: Create and push tag if not exists
