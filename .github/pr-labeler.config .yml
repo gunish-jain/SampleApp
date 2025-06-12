@@ -1,0 +1,4 @@
+release: [ "release/*" ]
+feature: [ "feature/*", "feat/*" ]
+fix: [ "fix/*", "bugfix/*", "bug/*" ]
+refactor: [ "refactor/*" ]
