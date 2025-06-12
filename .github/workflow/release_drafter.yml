@@ -48,12 +48,12 @@ jobs:
           fi
 
       - name: Draft and publish release
-        if: steps.create_tag.outputs.tag_created == 'true'
+        # if: steps.create_tag.outputs.tag_created == 'true'
         uses: release-drafter/release-drafter@v6
         with:
           config-name: release-drafter.config.yml
           version: v${{ env.APK_VERSION }}
           tag: v${{ env.APK_VERSION }}
-          publish: true
+          publish: false
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
